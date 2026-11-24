@@ -1,0 +1,43 @@
+/* QuizForge specific styles */
+.qf-progress { height: 6px; border-radius: 99px; background: var(--surface-2); overflow: hidden; }
+.qf-progress i { display: block; height: 100%; background: var(--accent); transition: width 0.4s var(--ease); }
+.qf-prompt { margin: 0; font-family: var(--font-display); font-weight: var(--display-weight); font-size: clamp(1.5rem, 3.4vw, 2.2rem); line-height: 1.15; letter-spacing: var(--display-tracking, 0); }
+.opts-fs { border: 0; margin: 0; padding: 0; }
+.opts { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.opt { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 2px solid var(--border); border-radius: var(--radius); background: var(--surface); cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.opt:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--border)); }
+.opt input { width: 18px; height: 18px; accent-color: var(--accent); flex: none; }
+.opt .key { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; border: 1px solid var(--border); font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); flex: none; }
+.opt.picked { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 6%, var(--surface)); }
+.opt.right { border-color: var(--ok); background: var(--ok-soft); }
+.opt.wrong { border-color: var(--danger, #b3261e); background: color-mix(in srgb, var(--danger, #b3261e) 8%, var(--surface)); }
+.opt:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+.opts.static .opt { cursor: default; }
+.opt .box { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 5px; border: 1.5px solid var(--rule); font-size: 0.75rem; font-weight: 700; }
+.opt.right .box { background: var(--ok); border-color: var(--ok); color: #fff; }
+.opt.wrong .box { background: var(--danger, #b3261e); border-color: var(--danger, #b3261e); color: #fff; }
+.explain { margin: 0; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.play-card { padding: 28px; }
+.review { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.review li.miss { border-left: 4px solid var(--danger, #b3261e); }
+.review li.ok { border-left: 4px solid var(--ok); }
+.review p { margin: 0; }
+.quiz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+.quiz-card p { margin: 0; }
+.warn-text { color: var(--warn); }
+.row-gap { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.file-btn { cursor: pointer; }
+.file-btn:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.qedit.has-errs { border-color: color-mix(in srgb, var(--warn) 60%, var(--border)); }
+.opt-edit { border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin: 0; display: grid; gap: 8px; }
+.opt-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: center; }
+.opt-row input[type='radio'], .opt-row input[type='checkbox'] { width: 18px; height: 18px; accent-color: var(--ok); }
+.q-errs { margin: 0; padding: 10px 14px 10px 30px; background: var(--warn-soft); color: var(--warn); border-radius: var(--radius-sm); font-size: 0.88rem; }
+.weak { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.weak li { display: flex; justify-content: space-between; gap: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.card.flush { padding: 0; }
+.hero-qf { display: grid; gap: 10px; }
+.hero-qf p { margin: 0; }
+.hero-qf .qf-prompt { font-size: 1.4rem; }
+.hero-qf .opt { padding: 8px 12px; }
+@media (prefers-reduced-motion: reduce) { .qf-progress i { transition: none; } }
