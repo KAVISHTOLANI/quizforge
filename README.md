@@ -2,7 +2,7 @@
 
 Write quizzes and take them. Four question types, instant feedback with explanations, forgiving typed answers, a retry-the-missed round, per-question results and JSON import/export.
 
-**Live demo:** [https://quizforge.vercel.app/](https://quizforge.vercel.app/) — runs entirely in your browser.
+**Live demo:** [https://quizforge-planner.vercel.app/](https://quizforge-planner.vercel.app/) — runs entirely in your browser.
 
 ![Landing with a select-all question](docs/landing.png)
 
